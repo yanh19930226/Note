@@ -44,7 +44,11 @@ Vue-NOTE
   window.addEventListener(function(){ 
     FastClick.attach( document.body );
   },false );
- 
+  滑动报Unable to preventDefault inside passive event listener的解决办法
+  html{
+   touch-action:none;
+  }
+  
  
     
 
