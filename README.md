@@ -24,6 +24,8 @@ CSS-NOTE:
     justify-content: space-between;//左右平均布局
 6.去除img标签下的底部的像素,使用vertical-align:middle
 7.实现经典的移动端商品两列布局
+
+8.关于flex布局的语法和案例：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
   
 
 Vue-NOTE
