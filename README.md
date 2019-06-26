@@ -26,6 +26,7 @@ CSS-NOTE:
 7.实现经典的移动端商品两列布局
 
 8.关于flex布局的语法和案例：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+  以及css除了flex布局的其他的方式：https://blog.csdn.net/zhang6223284/article/details/81909600#23-flexbox-%E5%B8%83%E5%B1%80
   
 
 Vue-NOTE
