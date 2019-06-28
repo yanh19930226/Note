@@ -32,6 +32,17 @@ CSS-NOTE:
 9.关于nth-of-type(n)和nth-child(n)的区别和解释：https://blog.csdn.net/weixin_41957484/article/details/80411082
 10.关于清除浮动的介绍：https://www.jianshu.com/p/72846dc3cf00
 11.移动开发一些特殊问题的解决：https://www.cnblogs.com/PeunZhang/p/3407453.html#meta
+12.然绝对定位(absolute)的元素水平居中的方法：
+方法一：（不能微调）
+position:absolute;
+left:0; right:0; top:0; bottom:0;
+margin:auto;
+方法二：（可微调）
+position:absolute;
+top:50%; left:50%;
+margin-top:-100px;(元素高度的一半)
+margin-left:-100px;(元素宽度的一半)
+
   
 
 Vue-NOTE
