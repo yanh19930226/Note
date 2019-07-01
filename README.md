@@ -70,6 +70,7 @@ Vue-NOTE
   ABP相关知识
   1:abp中文社区：https://cn.abp.io/Templates
     52abp:https://www.52abp.com/wiki
+    https://www.jianshu.com/u/cd2c97892d36
   
  
     
