@@ -71,6 +71,7 @@ Vue-NOTE
   1:abp中文社区：https://cn.abp.io/Templates
     52abp:https://www.52abp.com/wiki
     https://www.jianshu.com/u/cd2c97892d36
+    关于如何在abp框架中添加新的业务的方法的文章：https://www.cnblogs.com/chillsrc/p/11024357.html
   
  
     
