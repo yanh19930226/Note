@@ -42,7 +42,8 @@ position:absolute;
 top:50%; left:50%;
 margin-top:-100px;(元素高度的一半)
 margin-left:-100px;(元素宽度的一半)
-
+13.去除掉chrome的表单自动填充：
+ 在input type="password" 加上autocomplete="new-password"
   
 
 Vue-NOTE
