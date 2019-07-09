@@ -73,6 +73,8 @@ Vue-NOTE
     52abp:https://www.52abp.com/wiki
     https://www.jianshu.com/u/cd2c97892d36
     关于如何在abp框架中添加新的业务的方法的文章：https://www.cnblogs.com/chillsrc/p/11024357.html
+    abp-
+    https://www.cnblogs.com/anyushengcms/p/8309115.html
   
  
     
