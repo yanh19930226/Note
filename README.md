@@ -75,6 +75,10 @@ Vue-NOTE
     关于如何在abp框架中添加新的业务的方法的文章：https://www.cnblogs.com/chillsrc/p/11024357.html
     abp-
     https://www.cnblogs.com/anyushengcms/p/8309115.html
+    
+    
+    ABP配置权限简单：
+    https://blog.csdn.net/wangwengrui40/article/details/86677672
   
  
     
