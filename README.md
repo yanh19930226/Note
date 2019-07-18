@@ -79,6 +79,8 @@ Vue-NOTE
     
     ABP配置权限简单：
     https://blog.csdn.net/wangwengrui40/article/details/86677672
+    ABP设置默认的语言为中文
+    http://www.bubuko.com/infodetail-2932180.html
   
  
     
