@@ -49,7 +49,7 @@ margin-left:-100px;(元素宽度的一半)
  在input type="password" 加上autocomplete="new-password"
   
 
-Vue-NOTE
+Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
 1.关于vue-cli的创建
  npm install -g vue-cli
  vue init webpack name
