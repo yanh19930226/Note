@@ -1,4 +1,5 @@
 158源码网:https://www.158code.com/welcome/search?keyword=VR 使用qq登入
+Php：XMPP环境搭建：https://blog.csdn.net/web_xyk/article/details/80414662
 
 
 CSS-NOTE:
