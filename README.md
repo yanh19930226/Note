@@ -85,6 +85,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     https://blog.csdn.net/wangwengrui40/article/details/86677672
     ABP设置默认的语言为中文
     http://www.bubuko.com/infodetail-2932180.html
+    代码生成器：https://www.cnblogs.com/wer-ltm/p/5777978.html
     
     
     Asp.net Core:https://www.w3cschool.cn/netcore/netcore-hr9o31l0.html
