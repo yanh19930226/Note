@@ -103,6 +103,11 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     mysql/mysql-server
     --character-set-server=utf8 --collection-server=utf8_general_ci
     windows:mysql挂载资料卷：
+    
+    
+    
+    
+    Linux上安装docker;linux上修改docker镜像源;linux安装mysql创建挂载资料卷
            
     
     
