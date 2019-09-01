@@ -95,8 +95,27 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     Docer:
     windows安装mysql步骤：1.docker pull mysql/mysql-server 2.安装mysql配置用户名密码修改root密码和修改字符集命令：
-    docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="yanh" -e MYSQL_ROOT_PASSWORD="rootpassword" --name mysql mysql/mysql-server --character-set-server=utf8 --collation-server=utf8_general_ci
-    windows:mysql挂载资料卷：
+    docker run -d -p 3305:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" --name mysql mysql/mysql-server --character-set-server=utf8 --collation-server=utf8_general_ci
+    
+    安装成功运行成功后，可以进入docker容器进行相应的操作
+    1.进入容器：
+    docker exec -it [ContainerName] bash
+    //示例
+    docker exec -it mysql01 bash
+    2.进入mysql的命令行
+      命令行进入mysql的root账户：
+      mysql -uroot -p
+      输入密码登入mysql
+      use mysql 
+      查看mysql的一些信息select user, host, plugin from user
+      关于Mysql8.0以上用户登入名和密码加密错误还需要在多做一步操作;如果加密模式是sha2_cac,则需要修改加密的方式
+      ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+      修改root的加密方式，对应的需要修改远程登入用户的加密方式
+     
+     
+     
+     
+      windows:mysql挂载资料卷：
     
     
     
