@@ -102,6 +102,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     --name mysql
     mysql/mysql-server
     --character-set-server=utf8 --collection-server=utf8_general_ci
+    windows:mysql挂载资料卷：
            
     
     
