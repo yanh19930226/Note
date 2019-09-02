@@ -114,22 +114,21 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
       关于Mysql8.0以上用户登入名和密码加密错误还需要在多做一步操作;如果加密模式是sha2_cac,则需要修改加密的方式
       ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
       修改root的加密方式，对应的需要修改远程登入用户的加密方式
-    
-     
-     
-     
-     
       windows:mysql挂载资料卷：
     
     
     
     
-    Linux上安装docker;linux上修改docker镜像源;linux安装mysql创建挂载资料卷目录配置;安装命令;
-    修改root的密码;新建远程登入用户;可能需要修改加密方式;修改字符集；删除容器测试是否挂载成功
     
     
-   成功完成linux上安装docker mysql的安装和资料卷的挂载；
-   关于linux 上安装docker的文章：https://www.cnblogs.com/myzony/p/9071210.html
+    Linux上安装docker和Mysql的步骤思路：
+    1.Linux上安装docker;2.linux上修改docker镜像源;3.linux安装mysql创建挂载资料卷目录配置;4.安装命令;
+    5.修改root的密码和新建远程登入用户，可能需要修改加密方式;6.修改字符集后重启容器,查看字符集是否成功更改;7.删除容器测试是否挂载成功
+    
+    成功完成linux上安装docker mysql的安装和资料卷的挂载;关于linux 上安装docker的文章：https://www.cnblogs.com/myzony/p/9071210.html（保存到石     墨文档）
+    成功在linux上安装mongo
+    
+    挂载都需要先在宿主上创建对应的文件和文件夹
     
     
            
