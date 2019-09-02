@@ -124,7 +124,14 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     
     
-    Linux上安装docker;linux上修改docker镜像源;linux安装mysql创建挂载资料卷
+    Linux上安装docker;linux上修改docker镜像源;linux安装mysql创建挂载资料卷目录配置;安装命令;
+    修改root的密码;新建远程登入用户;可能需要修改加密方式;修改字符集；删除容器测试是否挂载成功
+    
+    
+   成功完成linux上安装docker mysql的安装和资料卷的挂载；
+   关于linux 上安装docker的文章：https://www.cnblogs.com/myzony/p/9071210.html
+    
+    
            
     
     
