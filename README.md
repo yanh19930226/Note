@@ -93,12 +93,10 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     
     
-    Docer:
-    windows 家庭版安装https://www.jianshu.com/p/2aa5b05717c6
-    
+    Docker(石墨文档):https://shimo.im/docs/anrlYMFEYloN52c8
     
     windows安装mysql步骤：1.docker pull mysql 2.安装mysql配置用户名密码修改root密码和修改字符集命令：
-    docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" --name mysql mysql --character-set-server=utf8 --collation-server=utf8_general_ci
+    docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" --name mysql mysql --character-     set-server=utf8 --collation-server=utf8_general_ci
     
     安装成功运行成功后，可以进入docker容器进行相应的操作
     1.进入容器：
@@ -114,7 +112,82 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
       关于Mysql8.0以上用户登入名和密码加密错误还需要在多做一步操作;如果加密模式是sha2_cac,则需要修改加密的方式
       ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
       修改root的加密方式，对应的需要修改远程登入用户的加密方式
+      
+      
+      
       windows:mysql挂载资料卷：
+      
+      1.提前在指定的目录下创建一个my.cnf文件,目录名最好为英文且不带特殊符号和空格,文件内容如下，注意：粘贴时要把每一行末尾的空格去除，否则运行时会报         错说utf8编码错误
+        [mysqld]
+        user=mysql
+        character-set-server=utf8
+        [client]
+        default-character-set=utf8
+        [mysql]
+        default-character-set=utf8
+  
+        将文件所在的磁盘设为共享磁盘,这样docker才有权限对文件进行读写,方法:启动docker后,点
+        击桌面右下角docker图标,右键选择settings,在SharedDrives 中勾选文件所在的磁盘,完成后docker需要重启
+        图片: https://images-cdn.shimo.im/t4SsLcr5uqgbKLdh/image.png
+        执行以下命令,磁盘路径(d:/mysql/config/my.cnf)需要根据自己配置文件所在的位置修改
+        docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD =password123 -e   MYSQL_ROOT_HOST=% -v e:/mysql/config/my.cnf:/etc/my.cnf --           name mysql01 mysql/mysql-server
+
+       4.使用 docker ps 查看是否启动,状态为 healthy 时 才算成功,然后通过以下命令进入容器
+         docker exec -it mysql01 bash
+         # 确认配置文件是否正确挂载
+
+         # 确认root登录密码
+         password123
+         select user,host from user;
+
+          5,最后可以用navicat 等外部工具测试是否能在外部正常连接docker图片: https://images-cdn.shimo.im/PxzNhEgXlhEipHAT/image.png
+          图片: https://images-cdn.shimo.im/9FRX20jYPP4VsLjX/image.png
+          图片: https://images-cdn.shimo.im/CLnM7HV5jtYTrqHF/image.png
+          
+          
+          (亲测有效)
+          所先创建相关文件夹与路径 
+          c:/docker/mysql/config/my.cnf
+          c:/docker/mysql/data
+          需要使用官方mysql直接而不是使用mysql/mysql-server版本
+          docker run -d -p 3306:3306 -e MYSQL_USER=sqltest -e MYSQL_PASSWORD=pwd123 -e MYSQL[mysqld]
+          user=mysql
+          character-set-server=utf8
+          [client]
+          default-character-set=utf8
+          [mysql]
+          default-character-set=utf8
+          
+          docker run -d -p 3306:3306 -e MYSQL_USER=sqltest -e MYSQL_PASSWORD=pwd123 -e MYSQL_ROOT_PASSWORD=pwd123 -e MYSQL_ROOT_HOST=% -           v c:/docker/mysql/config/my.cnf:/etc/my.cnf  -v c:/docker/mysql/data:/var/lib/mysql --name mysql01 mysq
+
+      
+      
+      windows:mongo的创建和资料卷的挂载：
+      --创建数据卷
+      docker volume create --name mongodata
+      --挂载数据卷运行mongo数据库
+      docker run --name mongodb -v mongodata:/data/db -p 27017:27017 -d mongo:latest [--auth]
+
+      注：测试使用，不需要账号权限不要加 --auth
+
+      参数：
+      docker run 运行容器
+      --name mongodb 运行容器的名称为mongodb
+      -v mongodata:/data/db 挂接保存数据的位置，冒号前面是本机（mongodata），后面是虚拟机中的映射目录（/data/db）
+      -p 27017:27017 映射端口，前面是本机端口，后面是docker内的端口
+      --auth 授权访问
+      --登录镜像
+      docker exec -it mongodb mongo admin
+      --创建账号
+      db.createUser({ 
+        user: 'root', 
+        pwd: 'admin', 
+        roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] 
+      });
+      --账号授权
+      db.auth("root","admin");
+
+     
     
     
     
