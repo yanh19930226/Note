@@ -95,6 +95,8 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     
     
+    
+    
     Docker(石墨文档):https://shimo.im/docs/anrlYMFEYloN52c8
     
     windows安装mysql步骤：1.docker pull mysql 2.安装mysql配置用户名密码修改root密码和修改字符集命令：
@@ -188,10 +190,6 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
       });
       --账号授权
       db.auth("root","admin");
-
-     
-    
-    
     
     
     
@@ -202,13 +200,60 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     成功完成linux上安装docker mysql的安装和资料卷的挂载;关于linux 上安装docker的文章：https://www.cnblogs.com/myzony/p/9071210.html（保存到石     墨文档）
     成功在linux上安装mongo
-    
     挂载都需要先在宿主上创建对应的文件和文件夹
+    
+    
+    
+    docker Console-->Dockerfile镜像制作：
+    FROM microsoft/dotnet:sdk AS build-env
+    WORKDIR /code
+
+    COPY *.csproj /code
+    RUN dotnet restore 
+
+    COPY . /code
+    RUN dotnet publish -c Release -o out
+
+    FROM microsoft/dotnet:2.2-aspnetcore-runtime 
+    WORKDIR /app
+
+    COPY --from=build-env /code/out ./
+    ENTRYPOINT [ "dotnet","console.dll"]
+    制作命令：docker build -t yanh/consle:prod
+    
+    docker aspnetcore--->Dockerfile镜像制作：
+    FROM microsoft/dotnet:2.2-sdk as build-env
+    WORKDIR /code
+    
+    COPY *.csproj ./
+    RUN dotnet restore
+    
+    COPY . ./
+    RUN dotnet publish -c Releash -o out
+    
+    FROM microsoft/dotnet:2.2-aspnetcore-runtime 
+    WORKDIR /app
+    
+    COPY --from=build-env /code/out ./
+    
+    EXPOSE 80
+    ENTRYPOINT ["dotnet","User.API.dll"]
+    制作命令并且使用DockerLink的方式实现aspnetcore程序镜像和Mysql镜像互联：
+    1.制作：docker build -t yanh/aspnetcore:prod .
+    2.互联：docker run -d -p 8002:80 --name aspnetcore --link mysql01:db yanh/aspnetcore:prod
+    
+    
+    
+    
+    
+    
     
     
     User.Api
     1.关于解决efcore操作mysql,出现System.InvalidOperationException:“No coercion operator is defined between types 'System.Int16' and          'System.Boolean'.”的问题:使用Pomelo.EntityFrameworkCore.MySql 
     2.efcore自动生成自增长主键：fluentapi ValuesGenerateAddOn
+    3.在dotnet 2.1 新建的webapi项目创建的ValuesController默认是 集成BaseController，没有Json方法，修改集成Controller即可
+    
     
     
            
