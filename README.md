@@ -251,6 +251,9 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     5.重新启动程序容器，实现网络互联
     
     
+    GitLab的安装：
+    1.linux:https://hub.docker.com/r/beginor/gitlab-ce/
+    
     
     
     
