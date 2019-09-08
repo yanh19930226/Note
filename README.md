@@ -208,6 +208,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     User.Api
     1.关于解决efcore操作mysql,出现System.InvalidOperationException:“No coercion operator is defined between types 'System.Int16' and          'System.Boolean'.”的问题:使用Pomelo.EntityFrameworkCore.MySql 
+    2.efcore自动生成自增长主键：fluentapi ValuesGenerateAddOn
     
     
            
