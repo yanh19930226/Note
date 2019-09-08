@@ -242,7 +242,13 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     1.制作：docker build -t yanh/aspnetcore:prod .
     2.互联：docker run -d -p 8002:80 --name aspnetcore --link mysql01:db yanh/aspnetcore:prod
     
-    
+    使用network实现数据库和程序互联：
+    1.创建新的网络：docker network create -d bridge mybridge  docker network ls
+    2.新建程序指定网络：docker run -d -p 8005:80 --net mybridge --name aspnetcore yanh/aspnetcore:prod
+    (由于没有为数据库的连接配置文件添加资料卷,aspcore的镜像是基于link的,所以此时程序是退出状态)
+    3.将mysql也添加到指定的网络中：docker network connect mybridge mysql01
+    4.将mysql容器重新命名：docker rename mysql01 db
+    5.重新启动程序容器，实现网络互联
     
     
     
