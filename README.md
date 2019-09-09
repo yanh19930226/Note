@@ -251,6 +251,49 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     5.重新启动程序容器，实现网络互联
     
     
+    DockerCompose.yml文件实现asp.netcore和mysql:
+    version: '3'
+    services:
+      db:（连接字符串也是叫db）
+        image: mysql
+        container_name: 'db'
+        restart: always
+        ports:
+          - 3306:3306
+        environment:
+          MYSQL_ROOT_PASSWORD: 123
+          MYSQL_USER: yanh
+          MYSQL_PASSWORD: 123
+        command:
+          --default-authentication-plugin=mysql_native_password
+          --character-set-server=utf8mb4
+          --collation-server=utf8mb4_general_ci
+          --explicit_defaults_for_timestamp=true
+          --lower_case_table_names=1
+        volumes:#资料卷的挂载（这时外部的文件一定要有数据）
+          - /e/docker/mysqlcompose/mysql-init:/docker-entrypoint-initdb.d
+          - /e/docker/mysqlcompose/data:/var/lib/mysql
+        networks:
+           - my-bridge
+      web:
+        build: 
+          context: .
+          dockerfile: Dockerfile  #指定使用的Dockerfile
+        container_name: 'myaspnetcore'
+        ports:
+           - '8000:80'
+        depends_on:
+           - db
+        volumes:#资料卷的挂载（这时外部的文件一定要有数据）
+           - /e/docker/mysqlcompose/appsettings.json:/app/appsettings.json
+        networks:
+           - my-bridge
+    networks:
+      my-bridge: #创建名为mybridge的network
+        driver: bridge
+        
+        
+        
     GitLab的安装：
     1.linux:https://hub.docker.com/r/beginor/gitlab-ce/
     
