@@ -295,7 +295,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
         
         
     GitLab的安装：
-    1.linux:https://hub.docker.com/r/beginor/gitlab-ce/
+    1.linux:https://docs.gitlab.com/omnibus/docker/#run-the-image
     
     
     
