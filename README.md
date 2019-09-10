@@ -296,6 +296,17 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
         
     GitLab的安装：
     1.linux:https://docs.gitlab.com/omnibus/docker/#run-the-image
+    2.gitlab502的解决访问：内存不足，添加虚拟内存
+    测试访问的时候老是提示502，原因在于我的服务器只有1G的内容，不满足gitlab运行的最低配置,gitlab最低的运行内存要求是2GB,配置的虚拟内存来解决问题
+    
+    sudo dd if=/dev/zero of=/swapfile bs=1024 count=2048k
+    sudo mkswap /swapfile
+    sudo swapon /swapfile
+    sudo vim /etc/fstab
+    添加内容
+    
+    /swapfile none swap defaults 0 0
+    这就解决问题了
     
     
     
