@@ -308,6 +308,9 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     /swapfile none swap defaults 0 0
     这就解决问题了
     
+    Windows下安装gitlab,没有配置资料卷
+    docker run -d --hostname localhost --publish 8443:443 --publish 8118:80 --publish 8022:22 --name gitlab --privileged=true --restart     always  gitlab/gitlab-ce:latest
+    
     
     
     
