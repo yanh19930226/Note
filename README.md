@@ -92,7 +92,26 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     Asp.net Core:https://www.w3cschool.cn/netcore/netcore-hr9o31l0.html
     
-    
+    Asp.NetCore基础：
+    1.Individual authentication 模板:
+      dotnet new mvc --help
+      其中：
+      -au|--auth                      The type of authentication to use
+                  Individual       - Individual authentication
+      
+      -uld|--use-local-db        Whether to use LocalDB instead of SQLite. 
+                                            This option only applies if --auth Individual or --auth IndividualB2C is specified.
+                                            bool - Optional
+      
+                                            默认值: false/(*) true
+      
+      2、创建一个MVC项目
+      ①dotnet new mvc -au Individual -uld --name IdentitySample
+      ②用VS Code打开创建的MVC项目文件夹
+      
+      3、修改代码，并创建数据库
+      ①修改appsettings.json的"DefaultConnection"连接字符串："Server=."
+      然后初始化数据库：dotnet ef database update
     
     
     
