@@ -89,6 +89,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     http://www.bubuko.com/infodetail-2932180.html
     代码生成器：https://www.cnblogs.com/wer-ltm/p/5777978.html
     
+    文章资料等:https://www.cnblogs.com/laozhang-is-phi/p/9541414.html
     
     Asp.net Core:https://www.w3cschool.cn/netcore/netcore-hr9o31l0.html
     
