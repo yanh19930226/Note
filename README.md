@@ -113,6 +113,8 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
       3、修改代码，并创建数据库
       ①修改appsettings.json的"DefaultConnection"连接字符串："Server=."
       然后初始化数据库：dotnet ef database update
+      
+     2.关于项目数据Identity MVC：DbContextSeed初始化:https://www.cnblogs.com/chongyao/p/9068007.html
     
     
     
