@@ -116,7 +116,8 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
       
      2.关于项目数据Identity MVC：DbContextSeed初始化:https://www.cnblogs.com/chongyao/p/9068007.html
     
-    
+    Identityserver：
+    1.IdentityServer4默认暴露的一些endpoint等信息：http://localhost:5000/.well-known/openid-configuration
     
     
     Docker(石墨文档):https://shimo.im/docs/anrlYMFEYloN52c8
