@@ -118,7 +118,11 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     Identityserver：
     1.IdentityServer4默认暴露的一些endpoint等信息：http://localhost:5000/.well-known/openid-configuration
-    
+    2.IdentityServer客户端数据库的初始化命令：
+      Add-Migration InitConfiguration -Context ConfigurationDbContext -OutputDir Data/Migrations/IdentityServer/ConfigurationDb
+      Add-Migration InitPersisted -Context PersistedGrantDbContext -OutputDir Data/Migrations/IdentityServer/PersistedGrantDb
+      Update-Database -Context ConfigurationDbContext
+      Update-Database -Context PersistedGrantDbContext
     
     Docker(石墨文档):https://shimo.im/docs/anrlYMFEYloN52c8
     
