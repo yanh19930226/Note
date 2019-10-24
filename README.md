@@ -190,7 +190,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
           [mysql]
           default-character-set=utf8
           
-          docker run -d -p 3306:3306 -e MYSQL_USER=sqltest -e MYSQL_PASSWORD=pwd123 -e MYSQL_ROOT_PASSWORD=pwd123 -e MYSQL_ROOT_HOST=% -           v c:/docker/mysql/config/my.cnf:/etc/my.cnf  -v c:/docker/mysql/data:/var/lib/mysql --name mysql01 mysq
+          docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" -e mysql_root_host=% -v d:homebi/docker/mysql/config/my.cnf:/etc/my.cnf  -v d:homebi/docker/mysql/data:/var/lib/mysql --name yanhsql mysql
 
       
       
