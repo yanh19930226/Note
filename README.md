@@ -125,6 +125,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
       Update-Database -Context PersistedGrantDbContext
     
     Docker(石墨文档):https://shimo.im/docs/anrlYMFEYloN52c8
+    Docker参考文档：https://yeasy.gitbooks.io/docker_practice/content/
     
     windows安装mysql步骤：1.docker pull mysql 2.安装mysql配置用户名密码修改root密码和修改字符集命令：
     docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" --name mysql mysql --character-     set-server=utf8 --collation-server=utf8_general_ci
