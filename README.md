@@ -92,6 +92,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     文章资料等:https://www.cnblogs.com/laozhang-is-phi/p/9541414.html
     
     Asp.net Core:https://www.w3cschool.cn/netcore/netcore-hr9o31l0.html
+    学习资料:http://www.csharpkit.com/2018-06-12_83909.html
     
     Asp.NetCore基础：
     1.Individual authentication 模板:
