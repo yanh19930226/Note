@@ -94,7 +94,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     Asp.net Core:https://www.w3cschool.cn/netcore/netcore-hr9o31l0.html
     学习资料:http://www.csharpkit.com/2018-06-12_83909.html
     
-    git配置sshkey:https://www.cnblogs.com/sharfir/p/8342298.html
+    git配置sshkey:https://www.cnblogs.com/xiaohaojs/p/11160199.html
     
     Asp.NetCore基础：
     1.Individual authentication 模板:
