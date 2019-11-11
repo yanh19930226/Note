@@ -77,6 +77,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
   ABP相关知识
   
   学习Asp.netCore:http://www.manongjc.com/article/93003.html
+      https://www.cnblogs.com/edisonchou/p/9124985.html
   1:abp中文社区：https://cn.abp.io/Templates
     52abp:https://www.52abp.com/wiki
     https://www.jianshu.com/u/cd2c97892d36
