@@ -94,6 +94,9 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     文章资料等:https://www.cnblogs.com/laozhang-is-phi/p/9541414.html
     
+    
+    
+    LUNZ# 开发手册:http://ls-doc.lunztech.cn/
     Asp.net Core:https://www.w3cschool.cn/netcore/netcore-hr9o31l0.html
     学习资料:http://www.csharpkit.com/2018-06-12_83909.html
     
