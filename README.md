@@ -330,7 +330,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
       my-bridge: #创建名为mybridge的network
         driver: bridge
         
-        
+     RabbitMQ安装：docker run -d --hostname my-rabbit --name rabbit -p 15672:15672 rabbitmq:3-management   
         
     GitLab的安装：
     1.linux:https://docs.gitlab.com/omnibus/docker/#run-the-image
