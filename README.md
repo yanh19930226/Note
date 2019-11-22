@@ -155,6 +155,9 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
       ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
       修改root的加密方式，对应的需要修改远程登入用户的加密方式
       
+      修改用户的权限:
+      GRANT ALL PRIVILEGES ON *.* TO 'test'@'localhost' WITH GRANT OPTION;
+      
       
       
       windows:mysql挂载资料卷：
@@ -200,8 +203,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
           [mysql]
           default-character-set=utf8
           
-          docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" -e mysql_root_host=% -v d:homebi/docker/mysql/config/my.cnf:/etc/my.cnf  -v d:homebi/docker/mysql/data:/var/lib/mysql --name yanhsql mysql
-
+          docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" -e mysql_root_host=% -v c:develop/docker/mysql/config/my.cnf:/etc/my.cnf  -v c:develop/docker/mysql/data:/var/lib/mysql --name yanhsql mysql
       
       
       windows:mongo的创建和资料卷的挂载：
