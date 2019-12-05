@@ -353,7 +353,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     
     
-    
+    Asp.Net Core 3.0 集成SwaggerUI:https://www.cnblogs.com/taotaozhuanyong/p/11602820.html
     
     User.Api
     1.关于解决efcore操作mysql,出现System.InvalidOperationException:“No coercion operator is defined between types 'System.Int16' and          'System.Boolean'.”的问题:使用Pomelo.EntityFrameworkCore.MySql 
