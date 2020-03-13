@@ -360,6 +360,10 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     2.efcore自动生成自增长主键：fluentapi ValuesGenerateAddOn
     3.在dotnet 2.1 新建的webapi项目创建的ValuesController默认是 集成BaseController，没有Json方法，修改集成Controller即可
     
+
+
+
+.NetCore测试XUnit测试：https://www.cnblogs.com/tylerzhou/p/11403854.html
     
     
            
