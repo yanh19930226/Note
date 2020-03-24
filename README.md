@@ -364,6 +364,9 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
 
 
 .NetCore测试XUnit测试：https://www.cnblogs.com/tylerzhou/p/11403854.html
+
+
+Linux服务器操作命令：uname -r 查看centos系统内核版本
     
     
            
