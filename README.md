@@ -368,6 +368,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
 
 Linux服务器操作命令：uname -r 查看centos系统内核版本
     关于centos8系统上面安装docker:https://blog.csdn.net/TianXieZuoMaiKong/article/details/104521439
+Linux下安装Docker:https://www.cnblogs.com/myzony/p/9071210.html    
     
 阿里云容器镜像服务登入密码：1234567890yh
     
