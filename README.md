@@ -351,6 +351,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     Windows下安装gitlab,没有配置资料卷
     docker run -d --hostname localhost --publish 8443:443 --publish 8118:80 --publish 8022:22 --name gitlab --privileged=true --restart     always  gitlab/gitlab-ce:latest
     
+    关于CodeFirst不能使用命令 Add-Migration Install-Package Microsoft.EntityFrameworkCore.Tools
     
     
     Asp.Net Core 3.0 集成SwaggerUI:https://www.cnblogs.com/taotaozhuanyong/p/11602820.html
