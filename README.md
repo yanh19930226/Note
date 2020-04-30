@@ -362,7 +362,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     1.关于解决efcore操作mysql,出现System.InvalidOperationException:“No coercion operator is defined between types 'System.Int16' and          'System.Boolean'.”的问题:使用Pomelo.EntityFrameworkCore.MySql 
     2.efcore自动生成自增长主键：fluentapi ValuesGenerateAddOn
     3.在dotnet 2.1 新建的webapi项目创建的ValuesController默认是 集成BaseController，没有Json方法，修改集成Controller即可
-    
+    在ASP.NET Core中所有用到EF的Service 都需要注册成Scoped
 
 
 
