@@ -369,6 +369,8 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
 .NetCore测试XUnit测试：https://www.cnblogs.com/tylerzhou/p/11403854.html
 .NetCore 自定义配置提供程序：.Net Core 自定义配置源从配置中心读取配置 https://www.cnblogs.com/kklldog/p/configruation_source.html
 
+https://blog.csdn.net/sundna/article/details/90374721 配置Redis数据源
+
 
 Linux服务器操作命令：uname -r 查看centos系统内核版本
     关于centos8系统上面安装docker:https://blog.csdn.net/TianXieZuoMaiKong/article/details/104521439
