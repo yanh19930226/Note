@@ -368,6 +368,7 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
 
 .NetCore测试XUnit测试：https://www.cnblogs.com/tylerzhou/p/11403854.html
 .NetCore 自定义配置提供程序：.Net Core 自定义配置源从配置中心读取配置 https://www.cnblogs.com/kklldog/p/configruation_source.html
+.NetCore 改造Logger
 
 https://blog.csdn.net/sundna/article/details/90374721 配置Redis数据源
 
