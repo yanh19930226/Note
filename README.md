@@ -231,7 +231,10 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
       --账号授权
       db.auth("root","admin");
     
-    
+    Docker
+      批量停止容器:docker container   stop   $(docker  container  ls   -a  -q)
+      批量删除容器：docker   container   rm  $(docker  container  ls   -a  -q)
+      批量删除镜像：docker  image   rm   $(docker  image  ls   -a  -q)
     
     
     Linux上安装docker和Mysql的步骤思路：
