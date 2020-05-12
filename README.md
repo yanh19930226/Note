@@ -376,6 +376,8 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
 .NetCore 自定义配置提供程序：.Net Core 自定义配置源从配置中心读取配置 https://www.cnblogs.com/kklldog/p/configruation_source.html
 .NetCore 改造Logger
 
+docker安装es和kibana互联：https://www.jianshu.com/p/fdfead5acc23
+
 
 1.Fluentd命令行指定配置文件：fluentd -c in_docker.conf
 2.Fluentd配置完成后测试：docker run --log-driver=fluentd --log-opt fluentd-address=localhost:24224 ubuntu echo "Hello Fluentd!"
