@@ -396,7 +396,7 @@ Linux下的防火墙：systemctl start  firewalld.service 开启防火墙
                 systemctl stop  firewalld.service  关闭防火墙
                 systemctl restart  firewalld.service 重启防火墙
     
-阿里云容器镜像服务登入密码：1234567890yh
+阿里云容器镜像服务登入密码：1234567890yh!
     
            
     
