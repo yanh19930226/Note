@@ -377,7 +377,12 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
 .NetCore 改造Logger
 
 
-Fluentd命令行指定配置文件：fluentd -c in_docker.conf
+1.Fluentd命令行指定配置文件：fluentd -c in_docker.conf
+2.Fluentd配置完成后测试：docker run --log-driver=fluentd --log-opt fluentd-address=localhost:24224 ubuntu echo "Hello Fluentd!"
+
+docker run --log-driver=fluentd --log-opt flunetd-address=192.168.1.8:24224 ubuntu echo "Hello Fluentd!"
+
+docker run -p 24224:24224 -v /c/develop/fluent:/fluentd/etc -e FLUENTD_CONF=fluentd.conf fluentd:latest
 
 https://blog.csdn.net/sundna/article/details/90374721 配置Redis数据源
 
