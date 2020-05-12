@@ -359,6 +359,9 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     
     
+    
+    
+    
     Asp.Net Core 3.0 集成SwaggerUI:https://www.cnblogs.com/taotaozhuanyong/p/11602820.html
     
     User.Api
@@ -372,6 +375,9 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
 .NetCore测试XUnit测试：https://www.cnblogs.com/tylerzhou/p/11403854.html
 .NetCore 自定义配置提供程序：.Net Core 自定义配置源从配置中心读取配置 https://www.cnblogs.com/kklldog/p/configruation_source.html
 .NetCore 改造Logger
+
+
+Fluentd命令行指定配置文件：fluentd -c in_docker.conf
 
 https://blog.csdn.net/sundna/article/details/90374721 配置Redis数据源
 
