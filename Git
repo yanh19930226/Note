@@ -1,0 +1,11 @@
+检查现有 SSH 密钥
+在生成 SSH 密钥之前，您可以检查是否有任何现有的 SSH 密钥
+
+1.查看本地是否有.ssh文件 找到 Git Bash 打开后 运行 cd ~/.ssh 查看是否有该文件 如果本地有ssh密钥的话会有id_rsa、id_rsa.pub、known_hosts等文件
+2.ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+如果本地有ssh，会出现如下提示：
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa):
+/c/Users/Administrator/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+这里选择y，表示覆盖本地的ssh key，这也就是ssh秘钥删除的意思
