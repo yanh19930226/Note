@@ -170,6 +170,17 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
         default-character-set=utf8
         [mysql]
         default-character-set=utf8
+        
+        [client] 
+        default-character-set=utf8
+        [mysqld]
+        character_set_server=utf8
+        sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+        lower_case_table_names=1
+        wait-timeout = 28800
+        [mysql] 
+        default-character-set=utf8
+        
   
         将文件所在的磁盘设为共享磁盘,这样docker才有权限对文件进行读写,方法:启动docker后,点
         击桌面右下角docker图标,右键选择settings,在SharedDrives 中勾选文件所在的磁盘,完成后docker需要重启
@@ -204,6 +215,9 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
           default-character-set=utf8
           
           docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" -e mysql_root_host=% -v c:/develop/docker/mysql/config/my.cnf:/etc/my.cnf  -v c:/develop/docker/mysql/data:/var/lib/mysql --name yanhsql mysql
+          
+          docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" -e mysql_root_host=% -v /mysql/config/my.cnf:/etc/my.cnf  -v /mysql/data:/var/lib/mysql --name yanhsql mysql
+          
       
       
       windows:mongo的创建和资料卷的挂载：
