@@ -219,6 +219,11 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
           docker run -d -p 3306:3306 -e MYSQL_USER="yanh" -e MYSQL_PASSWORD="123" -e MYSQL_ROOT_PASSWORD="123" -e mysql_root_host=% -v /mysql/config/my.cnf:/etc/my.cnf  -v /mysql/data:/var/lib/mysql --name yanhsql mysql
           
       
+
+
+
+
+
       
       windows:mongo的创建和资料卷的挂载：
       --创建数据卷
