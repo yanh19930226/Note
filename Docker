@@ -1,0 +1,4 @@
+1.从3.X开始微软的镜像就不再由hub.docker.com托管，是由微软官方进行独立维护，所以我们指定了镜像域名地址mcr.microsoft.com。 所以产生了一个问题，网速慢，可以采用我自制的镜像。
+
+aspnet地址:registry.cn-hangzhou.aliyuncs.com/yoyosoft/dotnet/core/aspnet:3.1
+sdk地址：registry.cn-hangzhou.aliyuncs.com/yoyosoft/dotnet/core/sdk
