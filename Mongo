@@ -20,7 +20,7 @@ docker exec -it mongoDb bash
 mongo
 > use admin
 switched to db admin
-> db.createUser({user:"admin",pwd:"admin",roles:[{role:"root",db:"admin"}]});
+> db.createUser({user:"admin",pwd:"admin",roles:[{role:"root",db:"admin"}],mechanisms : ["SCRAM-SHA-1"]});
 Successfully added user: {
   "user" : "admin",
   "roles" : [
