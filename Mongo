@@ -1,0 +1,71 @@
+1.# 编辑daemon.json文件
+vi /etc/docker/daemon.json
+
+# 文件内容
+{
+    "registry-mirrors": ["https://registry.docker-cn.com"]
+}
+# 重新加载配置
+sudo systemctl daemon-reload
+# 重启docker服务
+sudo systemctl restart docker
+
+
+1.
+
+2、创建mongoDb用户
+#进入mongoDb容器，创建管理员
+docker exec -it mongoDb bash
+#进入mongoDb
+mongo
+> use admin
+switched to db admin
+> db.createUser({user:"admin",pwd:"admin",roles:[{role:"root",db:"admin"}]});
+Successfully added user: {
+  "user" : "admin",
+  "roles" : [
+    {
+      "role" : "root",
+      "db" : "admin"
+    }
+  ]
+}
+#出现创建成功提示就对了，退出管理员
+> exit;
+#用刚创建的管理用户登录在创建个普通用户
+mongo --port 27017 -u admin -p admin --authenticationDatabase admin
+> use test
+switched to db test
+> db.createUser({user:"tester",pwd:"tester",roles:[{role:"readWrite",db:"test"}]});
+Successfully added user: {
+  "user" : "tester",
+  "roles" : [
+    {
+      "role" : "readWrite",
+      "db" : "test"
+    }
+  ]
+}
+> exit
+
+
+3、mongoDb用户角色权限说明
+数据库用户角色 read、readWrite
+数据库管理角色 dbAdmin、dbOwner、userAdmin
+集群管理角色 clusterAdmin、clusterManager、clusterMonitor、 hostManager
+备份恢复角色 backup、restore
+所有数据库角色 readAnyDatabase、readWriteAnyDatabase、userAdminAnyDatabase、dbAdminAnyDatabase
+超级用户角色 root
+内部角色 __system
+角色说明
+
+Read 允许用户读取指定数据库
+readWrite 允许用户读写指定数据库
+dbAdmin 允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问system.profile
+userAdmin 允许用户向system.users集合写入，可以找指定数据库里创建、删除和管理用户
+clusterAdmin 只在admin数据库中可用，赋予用户所有分片和复制集相关函数的管理权限。
+readAnyDatabase 只在admin数据库中可用，赋予用户所有数据库的读权限
+readWriteAnyDatabase 只在admin数据库中可用，赋予用户所有数据库的读写权限
+userAdminAnyDatabase 只在admin数据库中可用，赋予用户所有数据库的userAdmin权限
+dbAdminAnyDatabase 只在admin数据库中可用，赋予用户所有数据库的dbAdmin权限。
+root 只在admin数据库中可用。超级账号，超级权限
