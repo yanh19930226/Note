@@ -12,7 +12,7 @@ sudo systemctl restart docker
 
 
 1.
-
+docker run -p 27017:27017 -v /docker/mongo/data/:/data/db --name yanhmongo -d mongo --auth
 2、创建mongoDb用户
 #进入mongoDb容器，创建管理员
 docker exec -it mongoDb bash
