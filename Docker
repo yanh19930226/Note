@@ -2,3 +2,9 @@
 
 aspnet地址:registry.cn-hangzhou.aliyuncs.com/yoyosoft/dotnet/core/aspnet:3.1
 sdk地址：registry.cn-hangzhou.aliyuncs.com/yoyosoft/dotnet/core/sdk
+
+1.发布镜像到DockerHub
+  docker login -u 用户名 -p 密码
+2.关于docker push时,即使登入成功也不能推送的原因
+  push时即使账户密码正确也显示 [denied: requested access to the resource is denied]的问题
+  这里要注意一个问题,给自己镜像命名的时候格式应该是: docker注册用户名/镜像名,比如我的docker用户名为 test123,那么我的镜像tag就为 test123/whalesay,不然是push不上去的
