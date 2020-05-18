@@ -10,6 +10,11 @@
 4.重新加载yum
    yum clean all
    yum makecache
+5.将python命令指向Python   
+  ln -s /usr/local/bin/python2.7 /usr/local/bin/python
+  source /etc/profile
+6.检查Python版本
+  Python -V
 3.删除现有的Python
 [root@test ~]# rpm -qa|grep python|xargs rpm -ev --allmatches --nodeps ##强制删除已安装程序及其关联
 [root@test ~]# whereis python |xargs rm -frv ##删除所有残余文件 ##xargs，允许你对输出执行其他某些命令
