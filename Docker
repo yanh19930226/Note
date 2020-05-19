@@ -8,3 +8,19 @@ sdk地址：registry.cn-hangzhou.aliyuncs.com/yoyosoft/dotnet/core/sdk
 2.关于docker push时,即使登入成功也不能推送的原因
   push时即使账户密码正确也显示 [denied: requested access to the resource is denied]的问题
   这里要注意一个问题,给自己镜像命名的时候格式应该是: docker注册用户名/镜像名,比如我的docker用户名为 test123,那么我的镜像tag就为 test123/whalesay,不然是push不上去的
+
+
+删除所有已退出的容器
+
+docker rm $(docker ps -q -f status=exited)
+删除所有已停止的容器
+
+docker rm $(docker ps -a -q)
+删除所有正在运行和已停止的容器
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+删除所有容器，没有任何标准
+
+docker container rm $(docker container ps -aq)
+
