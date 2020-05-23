@@ -52,6 +52,6 @@ Linux CentOs安装docker
 Linux CentOs安装Nexus
 1.docker run -d --name nexus3 --restart=always -p 8081:8081 -v /opt/nexus-data:/nexus-data sonatype/nexus3
 2.使用Docker部署Nexus后提示：Unable to create directory /nexus-data/instance
-   解决方案： 修改宿主机文件夹权限
-   chmod 777 /opt/nexus-data
+  解决方案： 修改宿主机文件夹权限
+  chmod 777 /opt/nexus-data
 
