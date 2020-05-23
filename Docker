@@ -46,3 +46,12 @@ Linux CentOs安装docker
   $ sudo systemctl enable docker
 9、验证安装是否成功(有client和service两部分表示docker安装启动都成功了)
   $ docker version  
+
+
+
+Linux CentOs安装Nexus
+1.docker run -d --name nexus3 --restart=always -p 8081:8081 -v /opt/nexus-data:/nexus-data sonatype/nexus3
+2.使用Docker部署Nexus后提示：Unable to create directory /nexus-data/instance
+   解决方案： 修改宿主机文件夹权限
+   chmod 777 /opt/nexus-data
+
