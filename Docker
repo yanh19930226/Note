@@ -57,4 +57,5 @@ Linux CentOs安装Nexus
 3.nexus默认登入名admin,默认密码获取步骤
   1.docker exec -it containername bash 
   2.ls-> cd nexus-data cat admin.password->getpassword
+4.Nexus 的使用：https://www.cnblogs.com/Erik_Xu/p/9211471.html  
 
