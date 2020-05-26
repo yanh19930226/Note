@@ -1,2 +1,11 @@
 
 docker run -p 6379:6379 --name redis -v /usr/local/redis/redis.conf:/etc/redis/redis.conf -v /usr/local/redis/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
+
+参数说明：
+-p 6379:6379　　//容器redis端口6379映射宿主主机6379
+--name redis　　//容器名字为redis
+-v /usr/local/redis/conf:/etc/redis  //docker镜像redis默认无配置文件，在宿主主机/usr/local/redis/conf下创建redis.conf配置文件，会将宿主机的配置文件复制到docker中
+-v /root/redis/redis01/data:/data　　//容器/data映射到宿主机 /usr/local/redis/data下
+-d redis 　　//后台模式启动redis
+redis-server /etc/redis/redis.conf    //redis将以/etc/redis/redis.conf为配置文件启动
+--appendonly yes　　//开启redis的AOF持久化，默认为false，不持久化
