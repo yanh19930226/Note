@@ -9,3 +9,7 @@ docker run -p 6379:6379 --name redis -v /usr/local/redis/redis.conf:/etc/redis/r
 -d redis 　　//后台模式启动redis
 redis-server /etc/redis/redis.conf    //redis将以/etc/redis/redis.conf为配置文件启动
 --appendonly yes　　//开启redis的AOF持久化，默认为false，不持久化
+
+
+
+docker cp redis:/etc/redis/redis.conf /usr/local/redis//usr/local/redis/
