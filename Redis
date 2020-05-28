@@ -13,3 +13,9 @@ redis-server /etc/redis/redis.conf    //redis将以/etc/redis/redis.conf为配�
 
 
 docker cp redis:/etc/redis/redis.conf /usr/local/redis//usr/local/redis/
+
+
+
+1.redis类库的集成
+2.redis消息队列应用解耦（集成阿里云短信服务）
+3.redis分布式锁
