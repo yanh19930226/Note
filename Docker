@@ -59,3 +59,43 @@ Linux CentOs安装Nexus
   2.ls-> cd nexus-data cat admin.password->getpassword
 4.Nexus 的使用：https://www.cnblogs.com/Erik_Xu/p/9211471.html  
 
+Linux操作系统安装docker-compose
+docker-compose是个python写的命令行程序，可以直接pip安装，也在github上有地址https://github.com/docker/compose，可以直接clone下来python setup.py install  安装
+
+1.Centos系统：
+1.安装python-pip
+
+yum -y install epel-release
+yum -y install python-pip
+
+2.安装docker-compose
+pip install docker-compose
+
+3.对二进制文件应用可执行权限
+sudo chmod +x /usr/local/bin/docker-compose
+
+4.创建链接
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+5.查询版本的命令，即可安装docker-compose
+docker-compose version
+
+2.Ubantu系统：
+用pip3安装，python2渐渐不支持了，所以不再用python2来安装了。不论pip还是pip3, ubuntu都没自带需要安装，所以先安装python3-pip（这样是给ubuntu18自带的python3.6用的）注意，这是python2.7的
+
+1.sudo apt-get install -y python3-pip
+sudo pip3 install setuptools
+sudo pip3 install --upgrade pip
+pip 前面要加sudo，否则安装在当前用户下，没法用sudo安装全局的包
+
+2.最后直接pip安装
+sudo pip3 install docker-compose
+
+3.对二进制文件应用可执行权限
+sudo chmod +x /usr/local/bin/docker-compose
+
+4.创建链接
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+5.查看版本
+docker-compose --version
