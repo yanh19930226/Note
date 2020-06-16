@@ -8,5 +8,9 @@
 
 
 EFK解决方案一：直接使用serilog的writetoes的sinks组件来收集日志;
+docker run -d -p 9123:80 --name sms  sms:dev
+
 EFK解决方案二：完整的搭建EFK分布式日志收集框架
+
+docker run -d -p 9123:80 --name sms --log-driver=fluentd --log-opt fluentd-address=120.78.1.82:24224 --log-opt tag="测试" sms:dev
 
