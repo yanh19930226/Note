@@ -8,7 +8,10 @@
 
 
 EFK解决方案一：直接使用serilog的writetoes的sinks组件来收集日志;
-docker run -d -p 9123:80 --name sms  sms:dev
+1.docker pull sebp/elk:640
+2.docker run -it -d --name elk -p 5601:5601 -p 9200:9200 -p 5044:5044 -e ES_MIN_MEM=512m -e ES_MAX_MEM=1024m  sebp/elk:640
+  docker run -it -d --name elk -p 5601:5601 -p 9200:9200 -p 5044:5044 sebp/elk:640
+3.docker run -d -p 9123:80 --name sms  sms:dev
 
 EFK解决方案二：完整的搭建EFK分布式日志收集框架
 
