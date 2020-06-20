@@ -1,4 +1,7 @@
 搭建本地单机K8S环境
+石墨文档地址：https://shimo.im/docs/Ji1cdlgJKAUJWx3L/read
+文章地址：https://yq.aliyun.com/articles/508460
+
 1.chocolatey包管理器安装(Todo:科学上网加速)
 2.安装kuberctl
 3.从阿里云镜像服务下载Kubernetes安装所需Docker镜像:git clone https://github.com/AliyunContainerService/k8s-for-docker-desktop
