@@ -1,0 +1,8 @@
+搭建本地单机K8S环境
+1.chocolatey包管理器安装
+2.安装kuberctl
+3.从阿里云镜像服务下载Kubernetes安装所需Docker镜像:git clone https://github.com/AliyunContainerService/k8s-for-docker-desktop
+4.管理员打开powershell,设置powershell的安全级别
+  如果因为安全策略无法执行 PowerShell 脚本，请在 “以管理员身份运行” 的 PowerShell 中执行 Set-ExecutionPolicy RemoteSigned 命令
+5.powershell中执行： .\load_images.ps1
+  
