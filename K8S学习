@@ -1,5 +1,5 @@
 搭建本地单机K8S环境
-1.chocolatey包管理器安装
+1.chocolatey包管理器安装(Todo:科学上网加速)
 2.安装kuberctl
 3.从阿里云镜像服务下载Kubernetes安装所需Docker镜像:git clone https://github.com/AliyunContainerService/k8s-for-docker-desktop
 4.管理员打开powershell,设置powershell的安全级别
