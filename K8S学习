@@ -8,4 +8,13 @@
 4.管理员打开powershell,设置powershell的安全级别
   如果因为安全策略无法执行 PowerShell 脚本，请在 “以管理员身份运行” 的 PowerShell 中执行 Set-ExecutionPolicy RemoteSigned 命令
 5.powershell中执行： .\load_images.ps1
+6.k8s控制台使用Token令牌方式登入
+  # 创建dashboard管理用户
+  kubectl create serviceaccount dashboard-admin -n kube-system
+
+  # 绑定用户为集群管理用户
+  kubectl create clusterrolebinding dashboard-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:dashboard-admin
+
+  # 生成tocken
+  kubectl describe secret -n kube-system dashboard-admin-token
   
