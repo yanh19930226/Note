@@ -1,0 +1,1 @@
+1.文件服务：docker run -d -p 9001:80 -v /docker/fsv/dt:/data/FileService/files -v /docker/fsv/log:/var/log/FileServiceLog --name filesvcdev yanh1993/filesvc:dev
