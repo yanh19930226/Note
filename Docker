@@ -26,6 +26,8 @@ docker container rm $(docker container ps -aq)
 
 
 Linux CentOs安装docker
+
+
 1.通过 uname -r 命令查看你当前的内核版本
   $ uname -r
 2、使用 root 权限登录 Centos。确保 yum 包更新到最新。
