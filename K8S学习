@@ -3,6 +3,20 @@
 文章地址：https://yq.aliyun.com/articles/508460
 
 1.chocolatey包管理器安装(Todo:科学上网加速)
+以管理员身份运行cmd，安装chocolatey：
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+报错解决方案：
+直接打开网址：https://chocolatey.org/install.ps1
+右键另存为install.ps1文件
+以管理员运行cmd，切换到下载的install.ps1所在目录，运行下面代码：
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+使用 choco -V 检查是否安装成功
+2.安装wget
+choco install wget
+使用 wget -V 检查是否安装成功
+
+文章链接：https://blog.csdn.net/qq_43650934/article/details/106637645
+
 2.安装kuberctl
 3.从阿里云镜像服务下载Kubernetes安装所需Docker镜像:git clone https://github.com/AliyunContainerService/k8s-for-docker-desktop,需要根据k8s的对应版本下载对应的仓库
 4.管理员打开powershell,设置powershell的安全级别
