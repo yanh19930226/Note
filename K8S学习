@@ -67,5 +67,11 @@ EOF
   $ mkdir -p $HOME/.kube
   $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
-10.kubeadm token create --print--join-command
+10.如何向k8s集群添加node节点
+   1.首先在新节点的机器上配置好master节点的host
+     编辑/etc/host 文件添加master 节点的域名IP:192.168.30.131   apiserver.cluster.local
+   2.在master节点上执行 kubeadm token create --print-join-command,执行上面命令后将会输出 
+     root@node1:~# kubeadm token create --print-join-command
+     kubeadm join apiserver.cluster.local:6443 --token 0nptjy.lvbyzgl0v8v7yl2l --discovery-token-ca-cert-hash  sha256:31bea31503ae327e2c416aa310b61601fd6ae81c3ca31eaaf5c2f491f4d103cc
+   3.接着在新节点机器上执行  master节点上面命令输出结果
   
