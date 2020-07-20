@@ -74,4 +74,4 @@ EOF
      root@node1:~# kubeadm token create --print-join-command
      kubeadm join apiserver.cluster.local:6443 --token 0nptjy.lvbyzgl0v8v7yl2l --discovery-token-ca-cert-hash  sha256:31bea31503ae327e2c416aa310b61601fd6ae81c3ca31eaaf5c2f491f4d103cc
    3.接着在新节点机器上执行  master节点上面命令输出结果
-  
+11.安装网络插件：kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml 
