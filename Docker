@@ -10,6 +10,13 @@ sdk地址：registry.cn-hangzhou.aliyuncs.com/yoyosoft/dotnet/core/sdk
   这里要注意一个问题,给自己镜像命名的时候格式应该是: docker注册用户名/镜像名,比如我的docker用户名为 test123,那么我的镜像tag就为 test123/whalesay,不然是push不上去的
 
 
+docker中 启动所有的容器命令
+
+docker start $(docker ps -a | awk '{ print $1}' | tail -n +2)
+docker中    关闭所有的容器命令
+
+docker stop $(docker ps -a | awk '{ print $1}' | tail -n +2)
+
 删除所有已退出的容器
 
 docker rm $(docker ps -q -f status=exited)
