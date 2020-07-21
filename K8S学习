@@ -80,3 +80,4 @@ EOF
    copy Master节点etc/kubernetes/admin.conf文件内容,替换本地c盘下用户.kube下的.config的内容
    关于本地kubectl连接不上集群的解决办法：拷贝的证书生成的集群地址可能是内网地址，需要改成外网地址，在将外网地址配置到本地的host文件中进行映射
 13.本地Dashbord的部署:kubectl apply -f .\dashboard.yaml   
+   重装Dashboard：在kubernetes-dashboard.yaml所在路径下 kubectl delete -f kubernetes-dashboard.yaml  kubectl create -f kubernetes-dashboard.yaml
