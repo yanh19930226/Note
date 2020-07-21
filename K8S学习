@@ -76,3 +76,5 @@ EOF
    3.接着在新节点机器上执行  master节点上面命令输出结果
 11.安装网络插件：kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml 
                kubectl get pods --all-namespaces
+12.简单的本地方法操作K8S集群
+   copy Master节点etc/kubernetes/admin.conf文件内容,替换本地c盘下用户.kube下的.config的内容
