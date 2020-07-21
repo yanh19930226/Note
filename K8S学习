@@ -78,3 +78,4 @@ EOF
                kubectl get pods --all-namespaces
 12.简单的本地方法操作K8S集群
    copy Master节点etc/kubernetes/admin.conf文件内容,替换本地c盘下用户.kube下的.config的内容
+   关于本地kubectl连接不上集群的解决办法：拷贝的证书生成的集群地址可能是内网地址，需要改成外网地址，在将外网地址配置到本地的host文件中进行映射
