@@ -83,3 +83,5 @@ EOF
    重装Dashboard：在kubernetes-dashboard.yaml所在路径下 kubectl delete -f kubernetes-dashboard.yaml  kubectl create -f kubernetes-dashboard.yaml
    登入到本地的Dashboard：kubectl describe secret 复制token登入
    创建user.yaml文件给用户所有的权限:https://zhuanlan.zhihu.com/p/30684413
+   
+   !!!!!K8S Dashboard 安装解决方案：https://kuboard.cn/install/install-k8s-dashboard.html#%E5%AE%89%E8%A3%85
