@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: netcore
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: mysql
+  template:
+    metadata:
+      labels:
+        name: mysql
+        
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        # volumeMounts:
+        # - name: mysql-pvc
+        #   mountPath: /var/lib/mysql
+      # volumes:
+      #  - name: mysql-pvc
+      #    persistentVolumeClaim:
+      #      claimName: mysql
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql
+  namespace: netcore
+spec:
+  type: NodePort
+  ports:
+  - port: 3306
+  selector:
+    name: mysql
+---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: mysql
+# spec:
+#   accessModes:
+#   - ReadWriteMany
+  # resources:
+  #   requests:
+  #     storage: "5Gi"
+  # volumeName: 
+  # storageClassName: glusterfs
