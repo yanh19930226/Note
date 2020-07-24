@@ -85,3 +85,6 @@ EOF
    创建user.yaml文件给用户所有的权限:https://zhuanlan.zhihu.com/p/30684413
    
    !!!!!K8S Dashboard 安装解决方案：https://kuboard.cn/install/install-k8s-dashboard.html#%E5%AE%89%E8%A3%85
+   
+14.k8s搭建mysql：使用mysql.yaml kubectl create -f .\mysql.yaml
+   开放主机的端口,连接mysql
