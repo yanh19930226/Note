@@ -88,3 +88,4 @@ EOF
    
 14.k8s搭建mysql：使用mysql.yaml kubectl create -f .\mysql.yaml
    开放主机的端口,连接mysql
+15.mongodb使用hostpath和pv,pvc部署挂载数据   
