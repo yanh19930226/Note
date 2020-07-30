@@ -1,0 +1,18 @@
+1.确保防火墙已经关闭
+  systemctl stop firewalld
+  systemctl disable firewalld
+2.$ yum install -y nfs-utils
+3.创建共享目录:mkdir /nfsdata
+4.授权共享目录:chmod 666 /nfsdata
+5.编辑exports文件:
+   vi /etc/exports
+   /nfsdata *(rw,no_root_squash,no_all_squash,sync)
+   把*改成网段 比如在本地虚拟机的 192.168.139.0/24
+   /nfsdata 192.168.139.0/24(rw,no_root_squash,no_all_squash,sync)
+6.配置生效:exportfs -r或exportfs -rv 
+7.启动rpc和nfs（注意顺序）
+  systemctl start rpcbind
+  systemctl start nfs
+  systemctl enable rpcbind.service nfs
+8.执行  showmount -e 判断NFS创建的共享目录是否成功
+  showmount -e
