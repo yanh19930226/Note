@@ -11,8 +11,9 @@
    /nfsdata 192.168.139.0/24(rw,no_root_squash,no_all_squash,sync)
 6.配置生效:exportfs -r或exportfs -rv 
 7.启动rpc和nfs（注意顺序）
-  systemctl start rpcbind
-  systemctl start nfs
-  systemctl enable rpcbind.service nfs
+  $ systemctl enable rpcbind.service
+  $ systemctl enable nfs-server.service
+  $ systemctl start rpcbind.service
+  $ systemctl start nfs-server.service
 8.执行  showmount -e 判断NFS创建的共享目录是否成功
   showmount -e
