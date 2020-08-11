@@ -31,6 +31,9 @@ docker rm $(docker ps -a -q)
 
 docker container rm $(docker container ps -aq)
 
+删除docker的悬虚镜像和未使用的镜像
+docker image prune -a
+
 
 Linux CentOs安装docker
 
