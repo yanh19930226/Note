@@ -103,6 +103,10 @@ Vue-NOTE(vue后台模板框架：https://gitee.com/smallweigit/avue)
     
     git配置sshkey:https://www.cnblogs.com/xiaohaojs/p/11160199.html
     
+    
+    .net core 命令行下启动指定端口
+    dotnet test.dll --urls http://0.0.0.0:8000
+    
     Asp.NetCore基础：
     1.Individual authentication 模板:
       dotnet new mvc --help
