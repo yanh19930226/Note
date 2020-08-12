@@ -32,5 +32,6 @@
 6.配置SuperVisor守护进程：https://www.cnblogs.com/wanggang2016/p/12320560.html
   1.配置文件的封号的问题
   2.配置文件supervisor的日志记录文件创建的问题
+  3.SuperVisor的注释是封号，去除注释就是封号
 
 
