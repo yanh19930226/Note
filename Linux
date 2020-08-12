@@ -28,5 +28,9 @@
   Bt-Panel: http://106.55.10.190:8888/ff4d2617
   username: arvu52uz
   password: 8814938b
+  
+6.配置SuperVisor守护进程：https://www.cnblogs.com/wanggang2016/p/12320560.html
+  1.配置文件的封号的问题
+  2.配置文件supervisor的日志记录文件创建的问题
 
 
