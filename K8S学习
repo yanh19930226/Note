@@ -98,4 +98,20 @@ EOF
 手动搭建k8s
 1.etcd的安装：yum install etcd->systemctl start etcd
 2.设置etcd的版本：export ETCDCTL_API=3->存值和取值 etcdctl put kl v1;etcdctl get k1
+3.kubeapiserver:
+
+mkdir /kube
+cd /kube
+wget https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/linux/amd64/kube-apiserver
+chmod +x kube-apiserver
+
+./kube-apiserver \
+--etcd-servers=http://127.0.0.1:2379 \
+--service-cluster-ip-range=10.0.0.0/16 \
+--insecure-bind-address=0.0.0.0 \
+--external-hostname=192.168.139.131 \
+--disable-admission-plugins=ServiceAccount 
+
+# 记得把IP地址替换成你本地的地址 
+curl http://192.168.139.131:8080/api/v1/nodes
 
