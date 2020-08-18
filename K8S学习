@@ -113,5 +113,8 @@ chmod +x kube-apiserver
 --disable-admission-plugins=ServiceAccount 
 
 # 记得把IP地址替换成你本地的地址 
-curl http://192.168.139.131:8080/api/v1/nodes
+dashboard nodes http://192.168.139.131:8080/api/v1/nodes
+dashboardd pods http://192.168.139.131:8080/api/v1/pods
+swaggerapi http://192.168.139.131:8080/openapi/v2
+
 
