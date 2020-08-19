@@ -121,4 +121,59 @@ swaggerapi http://192.168.139.131:8080/openapi/v2
 wget https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/linux/amd64/kubectl
 
 chmod +x kubectl 
+5.kubelete
+  
+apiVersion: v1
+kind: Config
+clusters:
+- name: local
+  cluster:
+    server: http://127.0.0.1:8080
+users:
+- name: kubelet
+contexts:
+- context:
+    cluster: local
+    user: kubelet
+  name: kubelet-context
+current-context: kubelet-context
+wget https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/linux/amd64/kubelet
+
+chmod +x kubelet
+./kubelet --runtime-cgroups=/systemd/system.slice --kubelet-cgroups=/systemd/system.slice --kubeconfig=/kube/master-kubeletconfig.yaml
+
+curl http://localhost:10248/healthz
+
+# 记得把IP地址替换成你本地的地址 
+http://192.168.139.131:8080/api/v1/node
+
+6.kube-scheduler
+wget https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/linux/amd64/kube-scheduler
+
+chmod +x kube-scheduler
+./kube-scheduler --master=http://localhost:8080
+
+7.kubectl-controller-manager
+wget https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/linux/amd64/kube-controller-manager
+
+chmod +x kube-controller-manager
+./kube-controller-manager --master=http://localhost:8080
+
+8.apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: nginx
+  template:
+    metadata:
+      labels:
+        tier: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
 
