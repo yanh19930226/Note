@@ -1,7 +1,9 @@
+Add-Migration Init -Context ApplicationDbContext  -Output Data/Migrations/Ids/ApplicationDb
 Add-Migration InitConfiguration -Context ConfigurationDbContext  -Output Data/Migrations/Ids/ConfigureDb
 
 Add-Migration InitConfiguration -Context PersistedGrantDbContext -Output Data/Migrations/Ids/PersistedGrantDb
 
+Update-Database -Context ApplicationDbContext
 
 Update-Database -Context ConfigurationDbContext 
 
