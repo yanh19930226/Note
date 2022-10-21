@@ -1,0 +1,22 @@
+unbantu安装nginx:https://blog.csdn.net/qq_41985134/article/details/117991218
+
+
+# 切换至root用户
+sudo su root
+apt-get install nginx
+查看nginx是否安装成功
+nginx -v
+启动nginx
+service nginx start
+重启
+service nginx restart
+停止
+service nginx stop
+
+启动后，在网页重输入ip地址，即可看到nginx的欢迎页面。至此nginx安装成功
+nginx文件安装完成之后的文件位置：
+
+/usr/sbin/nginx：主程序
+/etc/nginx：存放配置文件
+/usr/share/nginx：存放静态文件
+/var/log/nginx：存放日志
