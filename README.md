@@ -449,6 +449,9 @@ systemctl stop firewalld.service
  firewall-cmd --state
     
 阿里云容器镜像服务登入密码：1234567890yh!
+
+
+Rsync:安装启动https://blog.csdn.net/majiangNB/article/details/113356241
     
            
     
