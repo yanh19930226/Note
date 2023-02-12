@@ -452,6 +452,21 @@ systemctl stop firewalld.service
 
 
 Rsync:安装启动https://blog.csdn.net/majiangNB/article/details/113356241
+
+chmod 600 /etc/rsyncd.pwd.client
+
+rsync --list-only --password-file=/etc/rsyncd.pwd.client sgg@8.130.46.60::ftp/
+
+
+rsync -avz --password-file=/etc/rsyncd.pwd.client /home/test/sgg@47.122.40.57::ftp/
+
+
+#!/bin/bash
+/usr/local/inotify/bin/inotifywait -mrq --timefmt '%d/%m/%y %H:%M' --format '%T %w%f %e' -e close_write,modify,delete,create,attrib,move //home/test/ | while read file
+do
+       
+        rsync -az --delete --password-file=/etc/rsyncd.pwd.client /home/test sgg@47.122.40.57::ftp/
+done
     
            
     
