@@ -111,3 +111,5 @@ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 5.查看版本
 docker-compose --version
+//docker dockerfile windows 写法
+docker build -t chatapi:v1 -f F:\In66.Chat.Api\src\In66.Chat.Api\Dockerfile .
