@@ -1,0 +1,49 @@
+FROM jenkins/jenkins
+ 
+ 
+USER root
+ 
+ 
+RUN uname -a && cat /etc/*release
+
+RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+RUN sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list 
+RUN  apt-get clean
+RUN apt-get update
+RUN apt-get install -y curl libunwind8 gettext apt-transport-https wget
+ 
+ 
+
+ 
+
+
+#https://dotnet.microsoft.com/download/linux-package-manager/debian9/sdk-current
+RUN wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+RUN dpkg -i packages-microsoft-prod.deb
+RUN  rm packages-microsoft-prod.deb
+
+
+
+ 
+# Install the .NET Core framework
+RUN apt-get update
+RUN apt-get install -y dotnet-sdk-6.0
+ 
+ 
+
+
+# Install the npm 
+RUN apt-get install -y curl \
+  && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+  && apt-get install -y nodejs \
+  && curl -L https://www.npmjs.com/install.sh | sh
+    
+# Install cnpm
+RUN npm install cnpm -g
+ 
+ 
+RUN npm -v
+RUN cnpm -v
+ 
+ 
+USER jenkins
