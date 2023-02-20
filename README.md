@@ -467,7 +467,24 @@ do
        
         rsync -az --delete --password-file=/etc/rsyncd.pwd.client /home/test sgg@47.122.40.57::ftp/
 done
-    
+
+
+
+
+
+Sonarqube: dotnet tool install --global dotnet-sonarscanner --version 5.3.1
+
+dotnet tool uninstall --global dotnet-sonarscanner --version 5.3.1
+
+
+sonar.sourceEncoding=UTF-8
+sonar.projectKey=66Web
+sonar.projectName=66Web
+sonar.projectVersion=1.0
+sonar.sources=.
+sonar.language=C#
+
+
            
     
     
