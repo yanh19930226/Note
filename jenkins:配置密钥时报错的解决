@@ -1,0 +1,7 @@
+jenkins:配置密钥时报错的解决：Failed to add SSH key. Message invalid privatekey(Jenkins 2.257)
+因为我们生成密钥的openssh的版本过高的原因
+
+more .ssh/id_rsa 可以看到密钥的首行
+
+
+指定格式:ssh-keygen -m PEM -t rsa -b 4096
