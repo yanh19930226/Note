@@ -1,0 +1,11 @@
+linux 远程ssh免密登录:
+ServerA和ServerB，ServerA需要免密登录ServerB，我们先在ServerA生成公钥和私钥，把公钥拷贝到ServerB指定的文件下，ServerA就可以免密登录ServerB
+ServerA执行ssh-keygen生成公私钥
+ssh-keygen
+
+公私钥 默认生成路径/root/.ssh（这里的root是用户名，如果你是其他用户替换即可）
+2、使用ssh-copy-id将公钥复制到ServerB中
+
+ssh-copy-id -i id_rsa.pub文件 ServerB用户名@ServerB_Ip
+#示例
+ssh-copy-id -i /root/.ssh/id_rsa.pub root@139.199.196.67
