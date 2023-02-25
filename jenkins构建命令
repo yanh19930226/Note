@@ -1,0 +1,1 @@
+ jenkins构建命令:docker run -u root --rm -d -p 8080:8080 --name jenkins -v /etc/localtime:/etc/localtime -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock -v /var/jenkins/jenkins_home:/var/jenkins_home yandejenkins:v1
