@@ -1,0 +1,33 @@
+#!/bin/bash
+#version
+
+#yande_version_tag=0.8.6.0
+yande_version_tag=`date +%Y%m%d%H%M`;
+
+#docker build
+
+echo "yandeweb docker build"
+cd $WORKSPACE
+docker build -t yandeweb:$yande_version_tag .
+
+#remove docker container
+
+dockercontainers=`docker ps -a | grep 'yandeweb' |awk '{print $1}'`
+dockerimages=`docker ps -a | grep 'yandeweb' |awk '{print $2}'`
+if test -n "$dockercontainers"; 
+then 
+docker container stop $dockercontainers;
+docker container rm $dockercontainers;
+fi;
+
+#run docker container
+
+docker run --name yandeweb -d -p 92:80 -e ASPNETCORE_ENVIRONMENT=production yandeweb:$yande_version_tag
+
+
+#remove docker none image
+if test -n "$dockerimages"
+then
+docker rmi -f $dockerimages
+fi;
+docker images  | grep none | awk '{print $3}' | xargs docker rmi;
