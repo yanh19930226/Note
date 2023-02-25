@@ -1,0 +1,34 @@
+安装并启动docker
+安装所需的包。yum-utils提供了yum-config-manager 效用，并device-mapper-persistent-data和lvm2由需要 devicemapper存储驱动程序：
+yum install -y yum-utils device-mapper-persistent-data lvm2
+
+设置稳定存储库：yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+安装：yum install -y docker-ce docker-ce-cli containerd.io
+
+安装Docker-compose:
+sudo curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+二进制文件赋可执行权限
+
+chmod +x /usr/local/bin/docker-compose
+
+
+下载Harbor安装文件：
+mkdir -p /harbor
+cd /harbor/
+wget https://github.com/goharbor/harbor/releases/download/v1.10.10/harbor-online-installer-v1.10.10.tgz
+tar -zxf harbor-online-installer-v1.10.10.tgz 
+
+安装Harbor
+
+./prepare
+
+./install.sh 
+
+启动Harbor
+docker-compose up -d 启动
+
+docker-compose stop 停止
+
+docker-compose restart 重新启动
