@@ -23,3 +23,9 @@
 如果你看到 Hi FrankFang! You’ve successfully authenticated, but GitHub does not provide shell access.
 那就说明你成功了
 文章链接：https://blog.csdn.net/stormyk/article/details/89362078
+
+
+删除本地 tag: git tag -d $(git tag -l)
+拉取远程 tag: git fetch
+
+删除远程 tag: git push origin --delete $(git tag -l)
